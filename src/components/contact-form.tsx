@@ -1,14 +1,15 @@
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { motion } from 'framer-motion';
 import * as yup from 'yup';
+import React, { useState } from 'react';
 
 import {
   VITE_EMAILJS_PUBLIC_KEY,
   VITE_EMAILJS_SERVICE_KEY,
   VITE_EMAILJS_TEMPLATE_KEY,
 } from '../config';
-import { useState } from 'react';
 
 type FormData = {
   user_name: string;
@@ -27,7 +28,7 @@ const schema = yup
   })
   .required();
 
-export default function ContactForm() {
+const ContactForm: React.FC = () => {
   const {
     register,
     handleSubmit,
@@ -61,9 +62,15 @@ export default function ContactForm() {
             disabled={loading}
           />
           {errors.user_name && (
-            <span className="text-red-500 py-2">
+            <motion.span
+              className="text-red-500 py-2"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.1 }}
+            >
               {errors.user_name.message}
-            </span>
+            </motion.span>
           )}
         </div>
         <div className="flex flex-col">
@@ -76,9 +83,15 @@ export default function ContactForm() {
             disabled={loading}
           />
           {errors.user_email && (
-            <span className="text-red-500 py-2">
+            <motion.span
+              className="text-red-500 py-2"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.1 }}
+            >
               {errors.user_email.message}
-            </span>
+            </motion.span>
           )}
         </div>
         <div className="flex flex-col">
@@ -92,7 +105,15 @@ export default function ContactForm() {
             disabled={loading}
           ></textarea>
           {errors.message && (
-            <span className="text-red-500 py-2">{errors.message.message}</span>
+            <motion.span
+              className="text-red-500 py-2"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.1 }}
+            >
+              {errors.message.message}
+            </motion.span>
           )}
         </div>
         <div className="flex">
@@ -107,4 +128,6 @@ export default function ContactForm() {
       </form>
     </>
   );
-}
+};
+
+export default ContactForm;

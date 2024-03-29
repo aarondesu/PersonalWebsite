@@ -5,8 +5,9 @@ import {
   isRouteErrorResponse,
 } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import React from 'react';
 
-export default function ErrorPage() {
+const ErrorPage: React.FC = () => {
   const navigate = useNavigate();
   const error = useRouteError();
 
@@ -65,4 +66,6 @@ export default function ErrorPage() {
       </div>
     );
   }
-}
+};
+
+export default ErrorPage;

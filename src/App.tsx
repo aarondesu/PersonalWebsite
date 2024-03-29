@@ -1,12 +1,13 @@
 import { Outlet } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import React from 'react';
 
 import './App.css';
 import Footer from './components/footer';
 import Header from './components/header';
 import Socials from './components/socials';
 
-export default function App() {
+const App: React.FC = () => {
   return (
     <div className="flex flex-col h-screen">
       <Header />
@@ -19,4 +20,6 @@ export default function App() {
       <Footer />
     </div>
   );
-}
+};
+
+export default App;

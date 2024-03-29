@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
+import React from 'react';
 
-export default function AboutPage() {
+const AboutPage: React.FC = () => {
   return (
     <motion.div
       className="flex flex-col md:flex-row justify-center md:m-auto mx-auto font-Roboto md:space-x-10"
@@ -40,4 +41,6 @@ export default function AboutPage() {
       </div>
     </motion.div>
   );
-}
+};
+
+export default AboutPage;

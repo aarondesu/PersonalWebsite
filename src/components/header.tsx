@@ -1,15 +1,16 @@
 import { Link } from 'react-router-dom';
 import logo from './../assets/Logo.svg';
 import { IconBaselineDensityMedium } from '@tabler/icons-react';
+import React from 'react';
 
-export default function Header() {
-  const Links = [
-    { name: 'Home', link: '/' },
-    { name: 'Portfolio', link: 'portfolio' },
-    { name: 'About', link: 'about' },
-    { name: 'Contact', link: 'contact' },
-  ];
+const Links = [
+  { name: 'Home', link: '/' },
+  { name: 'Portfolio', link: 'portfolio' },
+  { name: 'About', link: 'about' },
+  { name: 'Contact', link: 'contact' },
+];
 
+const Header: React.FC = () => {
   return (
     <div className="flex py-5 px-6 bg-neutral-200">
       <div className="shrink">
@@ -31,4 +32,6 @@ export default function Header() {
       </div>
     </div>
   );
-}
+};
+
+export default Header;

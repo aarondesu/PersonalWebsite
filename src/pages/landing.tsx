@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import React from 'react';
 
 import photo from '../assets/photo-1.png';
 
-export default function LandingPage() {
+const LandingPage: React.FC = () => {
   return (
     <motion.div
       className="flex flex-col lg:flex-row m-auto font-Roboto md:space-x-6 lg:space-x-10 "
@@ -41,4 +42,6 @@ export default function LandingPage() {
       </div>
     </motion.div>
   );
-}
+};
+
+export default LandingPage;

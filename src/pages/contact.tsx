@@ -7,8 +7,9 @@ import {
 } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
 import ContactForm from '../components/contact-form';
+import React from 'react';
 
-export default function ContactPage() {
+const ContactPage: React.FC = () => {
   return (
     <motion.div
       className="flex flex-col lg:m-auto mx-auto mt-10 font-Roboto"
@@ -64,4 +65,6 @@ export default function ContactPage() {
       </div>
     </motion.div>
   );
-}
+};
+
+export default ContactPage;
