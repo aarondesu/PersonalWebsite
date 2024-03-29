@@ -11,7 +11,7 @@ export default function Header() {
   ];
 
   return (
-    <div className="flex py-5 px-6">
+    <div className="flex py-5 px-6 bg-neutral-200">
       <div className="shrink">
         <Link to="/">
           <img src={logo} alt="" />

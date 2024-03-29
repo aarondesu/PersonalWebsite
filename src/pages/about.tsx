@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export default function AboutPage() {
   return (
     <motion.div
-      className="flex flex-col md:flex-row justify-center m-auto font-Roboto md:space-x-10"
+      className="flex flex-col md:flex-row justify-center md:m-auto mx-auto font-Roboto md:space-x-10"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

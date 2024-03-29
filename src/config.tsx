@@ -1,0 +1,5 @@
+export const {
+  VITE_EMAILJS_SERVICE_KEY,
+  VITE_EMAILJS_PUBLIC_KEY,
+  VITE_EMAILJS_TEMPLATE_KEY,
+} = import.meta.env;
