@@ -1,24 +1,44 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
 import photo from '../assets/photo-1.png';
 
 export default function LandingPage() {
   return (
-    <div className="flex flex-col md:flex-row m-auto font-Roboto md:space-x-10 ">
-      <div className="md:my-auto mt-6 md:order-1 order-2 md:text-start text-center">
-        <div className="text-sm text-gray-400">Hi I am a</div>
+    <motion.div
+      className="flex flex-col lg:flex-row m-auto font-Roboto md:space-x-6 lg:space-x-10 "
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <div className="lg:my-auto mt-6 lg:order-1 order-2 lg:text-start text-center">
+        <div className="text-xl text-gray-400">Aaron Neiel</div>
         <div className="text-5xl font-black">Fullstack</div>
         <div className="text-5xl font-black">Web Developer</div>
 
-        <Link
-          to="contact"
-          className="bg-indigo-500 text-white py-4 px-8 mt-8 w-full md:w-fit cursor-pointer block"
-        >
-          Contact Me
-        </Link>
+        <div className="flex space-x-6">
+          <Link
+            to="contact"
+            className="bg-indigo-500 text-white py-4 px-8 mt-8 w-full lg:w-fit cursor-pointer block "
+          >
+            Contact Me
+          </Link>
+
+          <Link
+            to="portfolio"
+            className="py-3 px-8 mt-8 w-full lg:w-fit cursor-pointer block border-4 border-gray-500"
+          >
+            Projects
+          </Link>
+        </div>
       </div>
-      <div className="md:order-2 order-1">
-        <img src={photo} alt="" className="md:w-lg sm:w-[500px] w-[320px]" />
+      <div className="mx-auto lg:order-2 order-1">
+        <img
+          src={photo}
+          alt=""
+          className="w-[320px] md:w-[600px] lg:w-[480px]"
+        />
       </div>
-    </div>
+    </motion.div>
   );
 }

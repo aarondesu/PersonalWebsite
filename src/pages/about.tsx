@@ -1,10 +1,15 @@
-import photo from '../assets/photo-1.png';
+import { motion } from 'framer-motion';
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col md:flex-row justify-center m-auto font-Roboto md:space-x-10">
-      <div className="md:my-auto mt-6 md:max-w-lg max-w-80 space-y-4 md:text-start text-center">
-        <div className="text-5xl font-black mb-10">About Me</div>
+    <motion.div
+      className="flex flex-col md:flex-row justify-center m-auto font-Roboto md:space-x-10"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <div className="md:my-auto mt-6 md:max-w-lg max-w-80 space-y-4  text-center">
+        <div className="text-5xl font-black mb-10">&#123; About &#125;</div>
         <div className="text-2xl font-black text-gray-600">
           Hey there! I'm Aaron
         </div>
@@ -33,9 +38,6 @@ export default function AboutPage() {
           look forward to the future as much as I can.
         </p>
       </div>
-      <div className="md:mt-0 mt-6">
-        <img src={photo} alt="" className="md:w-96 sm:w-[500px] w-[320px]" />
-      </div>
-    </div>
+    </motion.div>
   );
 }
