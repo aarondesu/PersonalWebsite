@@ -1,25 +1,41 @@
-import { Outlet } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import React from 'react';
 
-import './App.css';
-import Footer from './components/footer';
-import Header from './components/header';
-import Socials from './components/socials';
+import LandingPage from './pages/landing.tsx';
+import ErrorPage from './pages/error.tsx';
+import AboutPage from './pages/about.tsx';
+import PortfolioPage from './pages/portfolio.tsx';
+import ContactPage from './pages/contact.tsx';
+import Layout from './components/layout.tsx';
 
 const App: React.FC = () => {
-  return (
-    <div className="flex flex-col h-screen">
-      <Header />
-      <Socials />
-      <div className="grow flex my-2">
-        <AnimatePresence>
-          <Outlet />
-        </AnimatePresence>
-      </div>
-      <Footer />
-    </div>
-  );
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Layout />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          path: '/',
+          element: <LandingPage />,
+        },
+        {
+          path: 'about',
+          element: <AboutPage />,
+        },
+        {
+          path: 'portfolio',
+          element: <PortfolioPage />,
+        },
+        {
+          path: 'contact',
+          element: <ContactPage />,
+        },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 };
 
 export default App;
