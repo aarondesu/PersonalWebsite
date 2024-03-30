@@ -12,7 +12,7 @@ const Links = [
 
 const Header: React.FC = () => {
   return (
-    <div className="flex py-5 px-6 bg-neutral-200">
+    <div className="flex py-5 px-6 ">
       <div className="shrink">
         <Link to="/">
           <img src={logo} alt="" />
@@ -22,7 +22,7 @@ const Header: React.FC = () => {
         <div className="md:hidden">
           <IconBaselineDensityMedium size={26} />
         </div>
-        <ul className="md:flex shrink select-none text-sm md:visible hidden text-center space-x-8">
+        <ul className="md:flex shrink select-none text-sm md:visible hidden text-center space-x-8 divide-x">
           {Links.map((link) => (
             <li className="font-Roboto self-center" key={link.name}>
               <Link to={link.link}>{link.name}</Link>

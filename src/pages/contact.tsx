@@ -23,7 +23,7 @@ const ContactPage: React.FC = () => {
       <div className="flex mb-6 mt-10">
         <h1 className="text-4xl font-black"> Lets Work Together</h1>
       </div>
-      <div className="flex lg:flex-row flex-col lg:space-x-10 lg:space-y-0 space-y-6">
+      <div className="flex lg:flex-row flex-col lg:space-x-10 lg:space-x lg:space-y-0 space-y-6">
         <div className="flex flex-col space-y-4 lg:pb-0 pb-10 lg:pr-10 pr-0">
           <p className="md:w-[460px] w-[320px]">
             Your inquiries, suggestions, or collaborations are valued. Please

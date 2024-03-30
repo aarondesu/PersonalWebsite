@@ -10,6 +10,7 @@ import {
   VITE_EMAILJS_SERVICE_KEY,
   VITE_EMAILJS_TEMPLATE_KEY,
 } from '../config';
+import Button from './button';
 
 type FormData = {
   user_name: string;
@@ -117,13 +118,9 @@ const ContactForm: React.FC = () => {
           )}
         </div>
         <div className="flex">
-          <button
-            className="p-2 w-full bg-indigo-500 text-white"
-            type="submit"
-            disabled={loading}
-          >
+          <Button className="w-full" type="submit" loading={loading}>
             Submit
-          </button>
+          </Button>
         </div>
       </form>
     </>
