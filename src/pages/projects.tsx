@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 
-const PortfolioPage: React.FC = () => {
+const ProjectsPage: React.FC = () => {
   return (
     <motion.div
       className="flex flex-col lg:m-auto mx-auto mt-10 font-Roboto"
@@ -9,9 +9,9 @@ const PortfolioPage: React.FC = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <h1 className="font-black text-5xl">&#123; Portfolio &#125;</h1>
+      <h1 className="font-black text-5xl">&#123; Projects &#125;</h1>
     </motion.div>
   );
 };
 
-export default PortfolioPage;
+export default ProjectsPage;

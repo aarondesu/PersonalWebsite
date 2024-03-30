@@ -5,7 +5,7 @@ import React from 'react';
 
 const Links = [
   { name: 'Home', link: '/' },
-  { name: 'Portfolio', link: 'portfolio' },
+  { name: 'Projects', link: 'projects' },
   { name: 'About', link: 'about' },
   { name: 'Contact', link: 'contact' },
 ];

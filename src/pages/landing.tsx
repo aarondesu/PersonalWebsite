@@ -34,10 +34,11 @@ const LandingPage: React.FC = () => {
         </div>
       </div>
       <div className="mx-auto lg:order-2 order-1">
-        <img
+        <motion.img
+          transition={{ duration: 0.2 }}
           src={photo}
           alt=""
-          className="w-[320px] md:w-[600px] lg:w-[480px]"
+          className="w-[320px] md:w-[600px] lg:w-[480px] 2xl:w-[1024px]"
         />
       </div>
     </motion.div>
