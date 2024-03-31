@@ -10,9 +10,9 @@ const Links = [
   { name: 'Contact', link: 'contact' },
 ];
 
-const Header: React.FC = () => {
+const Navbar: React.FC = () => {
   return (
-    <div className="flex py-5 px-6 ">
+    <nav className="flex py-5 px-6 border-b-[2px] border-dashed">
       <div className="shrink">
         <Link to="/">
           <img src={logo} alt="" />
@@ -22,16 +22,16 @@ const Header: React.FC = () => {
         <div className="md:hidden">
           <IconBaselineDensityMedium size={26} />
         </div>
-        <ul className="md:flex shrink select-none text-sm md:visible hidden text-center space-x-8 divide-x">
+        <ul className="md:flex shrink select-none text-sm md:visible hidden text-center">
           {Links.map((link) => (
-            <li className="font-Roboto self-center" key={link.name}>
+            <li className="font-Roboto self-center px-4" key={link.name}>
               <Link to={link.link}>{link.name}</Link>
             </li>
           ))}
         </ul>
       </div>
-    </div>
+    </nav>
   );
 };
 
-export default Header;
+export default Navbar;
