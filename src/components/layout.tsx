@@ -2,17 +2,17 @@ import { Outlet } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 import React from 'react';
-import Header from './header';
+import Navbar from './navbar';
 import Footer from './footer';
 import Socials from './socials';
 
 const Layout: React.FC = () => {
   return (
     <div className="flex flex-col h-screen">
-      <Header />
+      <Navbar />
       <Socials />
       <AnimatePresence>
-        <div className="grow flex my-2">
+        <div className="grow flex my-2 p-10">
           <Outlet />
         </div>
       </AnimatePresence>
