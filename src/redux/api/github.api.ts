@@ -1,19 +1,24 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-type GithubRepoResult = {
+export type GithubRepo = {
     id: number,
     name: string,
-    fullname: string,
+    full_name: string,
     private: boolean,
-    htmlUrl: string,
-    description: string,    
+    html_url: string,
+    description: string,   
+    fork: boolean,
+}
+
+export type GithubRepoResult = {
+    results: GithubRepo[] 
 };
 
 export const githubApi = createApi({
     reducerPath: 'githubApi',
     baseQuery: fetchBaseQuery({ baseUrl: 'https://api.github.com/' }),
     endpoints: (builder) => ({
-        getGithubRepos: builder.query<GithubRepoResult, string>({
+        getGithubRepos: builder.query<GithubRepo[], void>({
             query: () => 'users/aarondesu/repos', 
         })
     })
