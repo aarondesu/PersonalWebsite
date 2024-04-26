@@ -52,6 +52,7 @@ const AboutPage: React.FC = () => {
                 <li>Frontend with React/ReduxJs/NextJs</li>
                 <li>Backend with ExpressJs/NestJs</li>
                 <li>Database management with MySQL/PostgresSQL</li>
+                <li>PERN/MERN Stack</li>
               </ul>
             </div>
             <div className="space-y-2">

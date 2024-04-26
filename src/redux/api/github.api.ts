@@ -8,6 +8,7 @@ export type GithubRepo = {
     html_url: string,
     description: string,   
     fork: boolean,
+    language?: string;
 }
 
 export type GithubRepoResult = {

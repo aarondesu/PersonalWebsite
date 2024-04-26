@@ -11,7 +11,7 @@ const LandingPage: React.FC = () => {
       exit={{ opacity: 0 }}
     >
       <div className="text-center space-y-6 lg:mt-28 mt-10">
-        <div className="space-y-4">
+        <div className="space-y-2">
           <div className="text-xl text-gray-400">Aaron Neiel</div>
           <div className="flex md:flex-row flex-col md:space-x-4 md:space-y-0 space-y-2 text-5xl font-black">
             <div className="md:text-5xl text-5xl font-black">Fullstack</div>
